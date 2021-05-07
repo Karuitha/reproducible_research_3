@@ -1,0 +1,15 @@
+base
+knitr
+rmdformats
+fivethirtyeight
+tidyverse
+ggplot2
+tibble
+tidyr
+readr
+purrr
+dplyr
+stringr
+forcats
+kableExtra
+ggthemes
