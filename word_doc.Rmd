@@ -2,14 +2,20 @@
 title: "Week 3 HTML Document"
 author: "John Karuitha"
 date: "5/7/2021"
-output: 
- html_document: 
-   css: mycss.css
-   toc: yes
-   toc_depth: 4
-   toc_float: true
-   code_folding: hide
-   keep_md: true
+output:
+  word_document:
+    toc: yes
+    toc_depth: '4'
+    reference_docx: word_style_doc.docx
+    df_print: kable
+  html_document:
+    css: mycss.css
+    toc: yes
+    toc_depth: 4
+    toc_float: yes
+    code_folding: hide
+    keep_md: yes
+    fig_width: 5
 ---
 
 ```{r setup, include=FALSE}
