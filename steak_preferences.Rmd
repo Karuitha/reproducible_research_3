@@ -1,0 +1,43 @@
+---
+author: "Author: John Karuitha"
+title: "Steak Preferences in the United States"
+subtitle: "Summary Report for the _**Mountain**_ Region"
+date: "`r format(Sys.Date(), '%A, %B %d, %Y')`"
+output:
+  rmdformats::readthedown:
+    highlight: kate
+---
+
+
+```{r setup, include=FALSE}
+##########################
+library(knitr)
+library(rmdformats)
+library(fivethirtyeight)
+library(tidyverse)
+library(kableExtra)
+library(ggthemes)
+
+##########################
+## Global options
+options(max.print="75")
+options(knitr.kable.NA = "-")
+options(digits = 4)
+
+knitr::opts_chunk$set(echo=FALSE, cache=TRUE,
+               prompt=FALSE, tidy=TRUE,
+               comment=NA, message=FALSE,
+               warning=FALSE)
+
+opts_knit$set(width=75)
+
+###########################
+# load Steak survey dataset
+data("steak_survey", package="fivethirtyeight")
+
+# Create a dataset without missing values
+sdat <- na.omit(steak_survey) %>% 
+    
+    filter(region=="Mountain")
+```
+
